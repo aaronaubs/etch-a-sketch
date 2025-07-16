@@ -48,16 +48,16 @@ button.onclick = () => {
     if (sketchpad.firstChild) clearGrid();
     else {
         createGrid(size.value);
-        assignSquareEvents();
-    }    
+        addMouseoverEvent();
+    }
     toggleButtonText();
 }
 
-function assignSquareEvents() {
+function addMouseoverEvent() {
     let squares = document.querySelectorAll(".square");
-squares.forEach(square => {
+    squares.forEach(square => {
     square.addEventListener("mouseover", (e) => {
         e.target.style.backgroundColor = "#000";
+        });
     });
-});
 }
