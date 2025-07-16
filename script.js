@@ -6,11 +6,11 @@ let size = document.getElementById('size');
 
 function createGrid(size) {
     for (let i = 0; i < size * size; i++) {
-        let square = document.createElement('div');
-        square.classList.add('square');
-        square.style.width = `${100 / size}%`;
-        square.style.height = `${100 / size}%`;
-        sketchpad.appendChild(square);
+        let square = document.createElement('div'); //create div
+        square.classList.add('square'); //add .square class
+        square.style.width = `${100 / size}%`; //set width
+        square.style.height = `${100 / size}%`; //set height
+        sketchpad.appendChild(square); //append to sketchpad
     }   
 }   
 
@@ -37,9 +37,9 @@ minusButton.onclick = () => {
 }
 
 function toggleButtonText() {
-    if (sketchpad.firstChild) {
+    if (sketchpad.firstChild) { //if the sketchpad has at least one square in it
         button.textContent = "Clear Grid";
-    } else {
+    } else { //if it's empty
         button.textContent = "Create Grid";
     }
 }
@@ -50,7 +50,7 @@ button.onclick = () => {
         createGrid(size.value);
         addMouseoverEvent();
     }
-    toggleButtonText();
+    toggleButtonText(); 
 }
 
 function addMouseoverEvent() {
