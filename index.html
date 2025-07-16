@@ -17,11 +17,11 @@
     </header>
     <div class="user-input-bar">
         <div class="grid-size-input">
-            <label for="gridSize" id="gridSizeLabel">Grid Size</label>
+            <label for="size" id="gridSizeLabel">Grid Size</label>
             <div class="number-input-wrap">
-                <div class="decrement" id="minusBtn">–</div>
-                <input type="number" id="gridSize" min="16" max="100" value="16" step="1">
-                <div class="increment" id="plusBtn">+</div>
+                <div class="decrement" id="minus-button">–</div>
+                <input type="number" id="size" min="16" max="100" value="16" step="1">
+                <div class="increment" id="plus-button">+</div>
             </div>   
         </div> 
         <button id="createGridBtn">Create Grid</button>
@@ -30,11 +30,6 @@
         <!--SketchpadSquares will be generated here-->
         <!--Quantity will be inputted by the user-->
     </div>
-    <div class="sketchpadBottom">
-        <div class="sketchpad-dial-wrap">
-            <div class="dial" id="leftDial"></div>
-            <div class="dial" id="rightDial"></div>
-        </div>
-    </div>
+
     <script src="script.js"></script>
 </body>
